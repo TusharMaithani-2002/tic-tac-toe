@@ -1,0 +1,114 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+nav{
+    background-color: rgb(51, 7, 51);
+    color: white;
+    display: flex;
+    height: 10vh;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    font-family: 'Roboto', sans-serif;
+}
+nav ul{
+    list-style: none;
+}
+.game-container{
+  /* background-color: aquamarine; */
+  display: flex;
+  justify-content: space-around;
+  height: 90vh;
+  width:100vw;
+  align-items: center;
+}
+.container{
+ display: grid;
+ grid-template-columns: repeat(3,10vw);
+ grid-template-rows: repeat(3,10vw);
+ font-family: 'Roboto', sans-serif;
+ width:40vh;
+}
+.box{
+    border: 2px solid black;
+    font-size: 8vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.box:hover{
+    background-color: rgb(231, 227, 234);
+    color: rgb(178, 60, 60);
+    cursor: pointer;
+    font-size: 10vw;
+}
+.game-info{
+    padding: 0 34px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+.img-box img{
+    /* display: none; */
+    /* removing image */
+    width:0px;
+    transition: width 1s ease-in-out;
+}
+
+/* creating utility classes for grid */
+.br-0 {
+    border-right: 0;
+}
+.bl-0 {
+    border-left: 0;
+}
+.bt-0 {
+    border-top: 0;
+}
+.bb-0 {
+    border-bottom: 0;
+}
+#reset {
+    border-radius: 10px;
+    width: 75px;
+    height:40px;
+    background-color: rgb(196, 148, 209);
+    margin: 0px 23px;
+    padding: 1px 10px;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+.info{
+    font-size: 25px;
+}
+@media screen and (max-width: 800px) {
+    .game-container{
+        flex-wrap: wrap;
+        font-size: .75rem;
+        /* justify-content: center; */
+        /* display:flex; */
+        /* flex-direction: column; */
+        /* align-items: center; */
+    }
+    .game-info{
+        margin-top: 10px;
+    }
+    .container{
+        /* padding: auto;
+        margin: auto; */
+        height:40vh;
+        width:90vw;
+        grid-template-columns: repeat(3,30vw);
+        position: relative;
+        grid-template-rows: repeat(3,30vw);
+    }
+    .box-text{
+        font-size: 4rem;
+    }
+}
